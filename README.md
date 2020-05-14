@@ -1,5 +1,7 @@
 # AWS Glue Docker
 
+[![Software License](https://goo.gl/FU2Kw1)](LICENSE)
+
 AWS [Glue Development](https://aws.amazon.com/pt/about-aws/whats-new/2019/08/aws-glue-releases-binaries-of-glue-etl-libraries-for-glue-jobs/) 
 enviroment base on [svajiraya/aws-glue-libs](https://github.com/svajiraya/aws-glue-libs) [fix](https://github.com/awslabs/aws-glue-libs/issues/25#issuecomment-628064396).
 
@@ -49,18 +51,18 @@ Glue [Python Shell](https://docs.aws.amazon.com/glue/latest/dg/add-job-python.ht
 
 ```bash
 docker run -v $PWD:/app \
-			-v ~/.aws:/home/docker/.aws \
-			-u $(id -u ${USER}):$(id -g ${USER}) \
-			-it webysther/aws-glue-docker:shell-py3
+            -v ~/.aws:/home/docker/.aws \
+            -u $(id -u ${USER}):$(id -g ${USER}) \
+            -it webysther/aws-glue-docker:shell-py3
 ```
 
 Glue pyspark 1.0
 
 ```bash
 docker run -v $PWD:/app \
-			-v ~/.aws:/home/docker/.aws \
-			-u $(id -u ${USER}):$(id -g ${USER}) \
-			-it webysther/aws-glue-docker:spark-1.0-py3
+            -v ~/.aws:/home/docker/.aws \
+            -u $(id -u ${USER}):$(id -g ${USER}) \
+            -it webysther/aws-glue-docker:spark-1.0-py3
 ```
 
 ### Not supported (migration only)
@@ -73,27 +75,27 @@ Glue pyspark 1.0
 
 ```bash
 docker run -v $PWD:/app \
-			-v ~/.aws:/home/docker/.aws \
-			-u $(id -u ${USER}):$(id -g ${USER}) \
-			-it webysther/aws-glue-docker:spark-1.0-py2
+            -v ~/.aws:/home/docker/.aws \
+            -u $(id -u ${USER}):$(id -g ${USER}) \
+            -it webysther/aws-glue-docker:spark-1.0-py2
 ```
 
 Glue pyspark 0.9
 
 ```bash
 docker run -v $PWD:/app \
-			-v ~/.aws:/home/docker/.aws \
-			-u $(id -u ${USER}):$(id -g ${USER}) \
-			-it webysther/aws-glue-docker:spark-0.9
+            -v ~/.aws:/home/docker/.aws \
+            -u $(id -u ${USER}):$(id -g ${USER}) \
+            -it webysther/aws-glue-docker:spark-0.9
 ```
 
 Glue [Python Shell](https://docs.aws.amazon.com/glue/latest/dg/add-job-python.html#python-shell-supported-library) 1.0
 
 ```bash
 docker run -v $PWD:/app \
-			-v ~/.aws:/home/docker/.aws \
-			-u $(id -u ${USER}):$(id -g ${USER}) \
-			-it webysther/aws-glue-docker:shell-py2
+            -v ~/.aws:/home/docker/.aws \
+            -u $(id -u ${USER}):$(id -g ${USER}) \
+            -it webysther/aws-glue-docker:shell-py2
 ```
 
 ## Glue
