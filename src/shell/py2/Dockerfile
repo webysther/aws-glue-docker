@@ -1,4 +1,4 @@
-FROM webysther/aws-glue-docker:spark-1.0-py2
+FROM webysther/aws-glue:spark-1.0-py2
 
 USER root
 
