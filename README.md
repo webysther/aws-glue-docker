@@ -9,12 +9,13 @@
 
 ### Spark
 
-[note](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-libraries.html):
-> You can use Python extension modules and libraries with your AWS Glue ETL scripts as long as they are written in pure Python. **C libraries such as pandas are not supported** at the present time, nor are extensions written in other languages.
-
 -	[`spark-1.0-py3`, `spark-py3`, `spark-1.0`, `spark`](https://github.com/webysther/aws-glue-docker/blob/master/src/spark/1.0/py3/Dockerfile)
 -	[`spark-1.0-py2`, `spark-py2`](https://github.com/webysther/aws-glue-docker/blob/master/src/spark/1.0/py2/Dockerfile)
 -	[`spark-0.9-py2`, `spark-0.9`](https://github.com/webysther/aws-glue-docker/blob/master/src/spark/0.9/Dockerfile)
+
+[warning](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-libraries.html): 
+>> You can use Python extension modules and libraries with your AWS Glue ETL scripts as long as they are written in pure Python. **C libraries such as pandas are not supported** at the present time, nor are extensions written in other languages.
+
 
 # AWS Glue Docker
 
