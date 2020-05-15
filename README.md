@@ -30,7 +30,7 @@ AWS Glue Development enviroment based on [svajiraya/aws-glue-libs](https://githu
 - [Glue Dynamic frames](https://youtu.be/PHYWI4Y9mzs?t=1226)
 - [Glue script samples](https://github.com/aws-samples/aws-glue-samples)
 - packaged with: debian 10, openJDK 8, spark 2.4, maven 3.6, python 3.6, pip 20, pytest, glue lib, boto3
-- additionally: aws cli, cdk, [glue Samples](https://github.com/aws-samples/aws-glue-samples) inside `/opt/samples`, poetry
+- additionally: aws cli, cdk, [glue Samples](https://github.com/aws-samples/aws-glue-samples) inside `/opt/samples`, [poetry](https://github.com/python-poetry/poetry)
 
 ## Getting started
 
