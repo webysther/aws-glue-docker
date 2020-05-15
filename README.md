@@ -1,3 +1,18 @@
+# Supported tags and respective `Dockerfile` links
+
+## Simple Tags
+
+### Python Shell
+
+-	[`shell-1.0-py3`, `shell-1.0`, `shell-py3`, `shell`, `latest`](https://github.com/webysther/aws-glue-docker/blob/master/src/shell/py3/Dockerfile)
+-	[`shell-1.0-py2`, `shell-py2`](https://github.com/webysther/aws-glue-docker/blob/master/src/shell/py2/Dockerfile)
+
+### Spark
+
+-	[`spark-1.0-py3`, `spark-py3`, `spark-1.0`, `spark`](https://github.com/webysther/aws-glue-docker/blob/master/src/spark/1.0/py3/Dockerfile)
+-	[`spark-1.0-py2`, `spark-py2`](https://github.com/webysther/aws-glue-docker/blob/master/src/spark/1.0/py2/Dockerfile)
+-	[`spark-0.9-py2`, `spark-0.9`](https://github.com/webysther/aws-glue-docker/blob/master/src/spark/0.9/Dockerfile)
+
 # AWS Glue Docker
 
 [![Software License](https://goo.gl/FU2Kw1)](LICENSE)
