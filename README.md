@@ -50,7 +50,7 @@ glue-spark pyspark
 # /app is you current folder
 glue-spark sparksubmit /app/spark_script.py
 
-# Glue Pyspark vanilla (without glue lib)
+# Pyspark vanilla (without glue lib)
 glue-spark
 $ ./${SPARK_HOME}/bin/spark-submit spark_script.py
 
