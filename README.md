@@ -31,9 +31,8 @@ AWS Glue Development enviroment based on [svajiraya/aws-glue-libs](https://githu
 ## Getting started
 
 ```bash
-# register alias
-alias glue='docker run -v $PWD:/app -v ~/.aws:/home/docker/.aws -u $(id -u ${USER}):$(id -g ${USER}) -it webysther/aws-glue "$@"'
-alias glue-spark='docker run -v $PWD:/app -v ~/.aws:/home/docker/.aws -u $(id -u ${USER}):$(id -g ${USER}) -it webysther/aws-glue:spark "$@"'
+# install docker and configure aliases
+curl -sSL https://raw.githubusercontent.com/webysther/aws-glue-docker/master/start.sh | sh
 
 # bash
 glue
@@ -57,8 +56,12 @@ $ ./${SPARK_HOME}/bin/spark-submit spark_script.py
 # Test
 glue pytest
 
-# aliases (backwards compatibility)
+# aliases inside docker (backwards compatibility)
 gluesparksubmit == sparksubmit
 gluepyspark == pyspark
 gluepytest == pytest
 ```
+
+## License
+
+MIT License. Please see [License File](LICENSE) for more information.

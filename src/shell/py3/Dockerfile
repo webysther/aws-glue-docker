@@ -10,4 +10,7 @@ RUN python -m pip install colorama docutils futures jmespath numpy pandas pip py
 RUN python -m pip install pygresql python-dateutil pytz pyyaml rsa s3transfer 
 RUN python -m pip install scikit-learn scipy setuptools six virtualenv wheel
 
+RUN chown -R docker:docker /opt
+RUN chown -R docker:docker /usr/local
+
 USER docker
