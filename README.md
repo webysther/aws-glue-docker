@@ -4,8 +4,8 @@
 
 ### Python Shell
 
--	[`shell-1.0-py3`, `shell-1.0`, `shell-py3`, `shell`, `latest`](https://github.com/webysther/aws-glue-docker/blob/master/src/shell/py3/Dockerfile)
--	[`shell-1.0-py2`, `shell-py2`](https://github.com/webysther/aws-glue-docker/blob/master/src/shell/py2/Dockerfile)
+-	[`shell-1.0-py3`, `shell-1.0`, `shell-py3`, `shell`, `py3`, `1.0`, `1`, `latest`](https://github.com/webysther/aws-glue-docker/blob/master/src/shell/py3/Dockerfile)
+-	[`shell-1.0-py2`, `shell-py2`, `py2`](https://github.com/webysther/aws-glue-docker/blob/master/src/shell/py2/Dockerfile)
 
 ### Spark
 
