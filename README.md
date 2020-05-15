@@ -57,7 +57,7 @@ $ ./${SPARK_HOME}/bin/spark-submit spark_script.py
 # Test
 glue pytest
 
-# aliases (backwards compat.)
+# aliases (backwards compatibility)
 gluesparksubmit == sparksubmit
 gluepyspark == pyspark
 gluepytest == pytest
