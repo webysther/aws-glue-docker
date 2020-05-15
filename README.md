@@ -9,6 +9,8 @@
 
 ### Spark
 
+> You can use Python extension modules and libraries with your AWS Glue ETL scripts as long as they are written in pure Python. **C libraries such as pandas are not supported** at the present time, nor are extensions written in other languages.
+
 -	[`spark-1.0-py3`, `spark-py3`, `spark-1.0`, `spark`](https://github.com/webysther/aws-glue-docker/blob/master/src/spark/1.0/py3/Dockerfile)
 -	[`spark-1.0-py2`, `spark-py2`](https://github.com/webysther/aws-glue-docker/blob/master/src/spark/1.0/py2/Dockerfile)
 -	[`spark-0.9-py2`, `spark-0.9`](https://github.com/webysther/aws-glue-docker/blob/master/src/spark/0.9/Dockerfile)
@@ -34,24 +36,20 @@ AWS Glue Development enviroment based on [svajiraya/aws-glue-libs](https://githu
 # install docker and configure aliases
 curl -sSL https://raw.githubusercontent.com/webysther/aws-glue-docker/master/start.sh | sh
 
-# bash
+# to use pandas
 glue
 
-# Glue Python Shell
-# /app is you current folder
-glue python
-glue python /app/script.py
+# or pyspark
+glue-spark
 
-# Glue PySpark (REPL) 
-glue-spark pyspark
+# here you are inside docker
+
+# Glue PySpark (REPL)
+pyspark
 
 # Glue PySpark
 # /app is you current folder
 glue-spark sparksubmit /app/spark_script.py
-
-# Pyspark vanilla (without glue lib)
-glue-spark
-$ ./${SPARK_HOME}/bin/spark-submit spark_script.py
 
 # Test
 glue pytest
