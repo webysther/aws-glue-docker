@@ -42,15 +42,15 @@ RUN npm install -g aws-cdk
 
 # glue samples
 RUN git clone --depth 1 https://github.com/aws-samples/aws-glue-samples /opt/aws-glue-samples && \
-	ln -s  /opt/aws-glue-samples/examples/ /opt/samples/glue
+	ln -s /opt/samples/glue /opt/aws-glue-samples/
 
 # cdk samples
 RUN git clone --depth 1 https://github.com/aws-samples/aws-cdk-examples.git /opt/aws-cdk-samples && \
-    ln -s  /opt/aws-cdk-samples/ /opt/samples/cdk
+    ln -s  /opt/samples/cdk /opt/aws-cdk-samples/
 
 # cloudformation samples
 RUN git clone --depth 1 https://github.com/awslabs/aws-cloudformation-templates.git /opt/aws-cloudformation-samples && \
-    ln -s  /opt/aws-cloudformation-samples/ /opt/samples/cloudformation
+    ln -s /opt/samples/cloudformation /opt/aws-cloudformation-samples/
 
 # User
 RUN addgroup --gid 1000 docker && \
