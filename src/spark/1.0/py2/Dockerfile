@@ -1,16 +1,16 @@
 FROM svajiraya/glue-dev-1.0:20200513_151648UTC as glue
 FROM openjdk:8-jdk-slim-buster as spark
 
-# Dependencies 
+# Dependencies
 RUN apt-get -q update -y && \
 	apt-get -qq install -y curl git && \
 	rm -rf /var/lib/apt/lists/*
 
 # Maven
-RUN curl -SsL https://aws-glue-etl-artifacts.s3.amazonaws.com/glue-common/apache-maven-3.6.0-bin.tar.gz | tar -C /opt --warning=no-unknown-keyword -xzf - 
+RUN curl -SsL https://aws-glue-etl-artifacts.s3.amazonaws.com/glue-common/apache-maven-3.6.0-bin.tar.gz | tar -C /opt --warning=no-unknown-keyword -xzf -
 
 # Spark
-RUN curl -SsL https://aws-glue-etl-artifacts.s3.amazonaws.com/glue-1.0/spark-2.4.3-bin-hadoop2.8.tgz | tar -C /opt --warning=no-unknown-keyword -xzf - 
+RUN curl -SsL https://aws-glue-etl-artifacts.s3.amazonaws.com/glue-1.0/spark-2.4.3-bin-hadoop2.8.tgz | tar -C /opt --warning=no-unknown-keyword -xzf -
 
 # AWS glue scripts (get from freezed fork)
 RUN git clone --depth 1 -b glue-1.0 --single-branch https://github.com/webysther/aws-glue-libs.git /opt/aws-glue-libs
@@ -40,9 +40,17 @@ RUN python -m pip install awscli && python -m pip install -U pytest
 # cdk
 RUN npm install -g aws-cdk
 
-# samples
+# glue samples
 RUN git clone --depth 1 https://github.com/aws-samples/aws-glue-samples /opt/aws-glue-samples && \
-	ln -s  /opt/aws-glue-samples/examples/ /opt/samples
+    ln -s  /opt/aws-glue-samples/examples/ /opt/samples/glue
+
+# cdk samples
+RUN git clone --depth 1 https://github.com/aws-samples/aws-cdk-examples.git /opt/aws-cdk-samples && \
+    ln -s  /opt/aws-cdk-samples/ /opt/samples/cdk
+
+# cloudformation samples
+RUN git clone --depth 1 https://github.com/awslabs/aws-cloudformation-templates.git /opt/aws-cloudformation-samples && \
+    ln -s  /opt/aws-cloudformation-samples/ /opt/samples/cloudformation
 
 # User
 RUN addgroup --gid 1000 docker && \
