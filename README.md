@@ -16,6 +16,7 @@
 > You can use Python extension modules and libraries with your AWS Glue ETL scripts as long as they are written in pure Python. **C libraries such as pandas are not supported** at the present time, nor are extensions written in other languages. <br>
 > -- [AWS](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-libraries.html)
 
+# Deprecated, please migrate to [v3/v4](https://aws.amazon.com/pt/blogs/big-data/develop-and-test-aws-glue-version-3-0-jobs-locally-using-a-docker-container/)
 
 # AWS Glue Docker
 
